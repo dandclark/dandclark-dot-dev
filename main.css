@@ -2,7 +2,7 @@ body {
     background-color: #202020;
     color: #cac7c7;
     font-family: helvetica;
-    font-size: large;
+    font-size: 1.2em;
 }
 
 .content-box {
@@ -34,6 +34,15 @@ div.titlebar {
     justify-content: flex-start;
     align-items: stretch;
     gap: 3em;
+}
+
+div.titlebar #main-title {
+    font-size: 3.5em;
+    padding-bottom: 0.1em;
+}
+
+div.titlebar #secondary-title {
+    font-size: 1.8em;
 }
 
 div.titlebar #img-container {
