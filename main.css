@@ -30,7 +30,19 @@ div.titlebar-divider {
 }
 
 div.titlebar {
-    /*padding: 0.5em;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 3em;
+}
+
+div.titlebar #img-container {
+    width: 10em;
+    flex-shrink: 0; /* TODO Do something better at high zoom */
+    background-image: url("./img/dan.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2em;
 }
 
 .content-box a {
