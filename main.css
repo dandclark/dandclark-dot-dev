@@ -5,23 +5,23 @@ body {
     font-size: large;
 }
 
-body > .content-box {
+.content-box {
     background-color: #414141;
     padding: 1em;
     margin: 1em;
     border-radius: 0.5em;
 }
 
-#main > div {
+.content-box:not(.titlebar) > div {
     padding: 0.0em;
     margin: 1.0em 0em 1em 0em;
 }
 
-#main > div:first-child {
+.content-box:not(.titlebar) > div:first-child {
     margin-top: 0em;
 }
 
-#main > div:last-child {
+.content-box:not(.titlebar) > div:last-child {
     margin-bottom: 0em;
 }
 
@@ -56,20 +56,20 @@ div.titlebar #img-container {
     text-shadow:  #dadada 0.02em -0.05em 0.4em;
 }
 
-#links ul {
+.content-box ul {
     margin: 0em;
-    padding: 0em;
+    padding-left: 1.5em;
 }
 
-#links li {
-    list-style: none;
+.content-box li {
+    /*list-style: none;*/
     margin: 0.4em 0em 0.4em 0em;
 }
 
-#links li:first-child {
+.content-box li:first-child {
     margin-top: 0em;
 }
 
-#links li:last-child {
+.content-box li:last-child {
     margin-bottom: 0em;
 }
