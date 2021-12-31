@@ -32,7 +32,7 @@ div.titlebar-divider {
 div.titlebar {
     display: flex;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
     gap: 3em;
 }
 
@@ -46,12 +46,13 @@ div.titlebar #secondary-title {
 }
 
 div.titlebar #img-container {
-    width: 10em;
+    width: 8em;
+    height: 8em;
     flex-shrink: 0; /* TODO Do something better at high zoom */
-    background-image: url("./img/dan.jpg");
-    background-size: cover;
+    background-image: url("./img/dan-512x512.jpg");
+    background-size: contain;
     background-repeat: no-repeat;
-    border-radius: 2em;
+    border-radius: 0.5em;
 }
 
 .content-box a {
