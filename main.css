@@ -61,22 +61,20 @@ body {
     border-radius: 0.5em;
 }
 
-.titlebar > .main-link-container {
+.titlebar > .main-link-container a {
     padding: 0.5em 1em 0.5em 1em;
     border-radius: 0.5em;
 }
 
-.titlebar.content-box > .main-link-container:hover {
-    outline:  0.1em solid var(--main-text-color);
-}
-
 .titlebar.content-box a {
     color: var(--main-text-color);
+    display: block;
 }
 
 .titlebar.content-box a:hover {
     text-shadow: none;
     text-decoration: none;
+    outline:  0.1em solid var(--main-text-color);
 }
 
 nav {
@@ -87,17 +85,17 @@ nav {
     font-size: 1.4em;
 }
 
-nav div {
+.titlebar nav a {
     padding: 0.35em;
     border-radius: 0.3em;
 }
 
-nav div.current {
+.titlebar nav a.current {
     outline:  0.1em solid var(--main-text-color);
 }
 
-nav div:not(.current):hover {
-    outline:  0.05em solid var(--main-text-color);
+.titlebar nav a:not(.current):hover {
+    outline:  0.06em solid var(--main-text-color);
 }
 
 .content-box a {
@@ -118,7 +116,6 @@ nav div:not(.current):hover {
 }
 
 .content-box li {
-    /*list-style: none;*/
     margin: 0.4em 0em 0.4em 0em;
 }
 
