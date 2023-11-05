@@ -40,6 +40,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 3em;
+    min-width: min-content;
 }
 
 .titlebar #main-title {
