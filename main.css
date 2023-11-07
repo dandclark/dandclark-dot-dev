@@ -9,6 +9,8 @@ body {
     color: var(--main-text-color);
     font-family: helvetica;
     font-size: 1.2em;
+    margin: auto;
+    max-width: 70em;
 }
 
 .content-box {
