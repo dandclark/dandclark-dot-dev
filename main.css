@@ -137,3 +137,7 @@ nav {
 #sneaky::before {
     content: "daniec";
 }
+
+@view-transition {
+    navigation: auto;
+}
