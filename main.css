@@ -74,10 +74,13 @@ body {
     display: block;
 }
 
+.titlebar.content-box .link-outline:has(a:hover) {
+    outline:  0.1em solid var(--main-text-color);
+}
+
 .titlebar.content-box a:hover {
     text-shadow: none;
     text-decoration: none;
-    outline:  0.1em solid var(--main-text-color);
 }
 
 nav {
@@ -89,15 +92,24 @@ nav {
 }
 
 .titlebar nav a {
-    padding: 0.35em;
-    border-radius: 0.3em;
+    position: relative;
 }
 
-.titlebar nav a.current {
+.titlebar nav .link-outline {
+    position: absolute;
+    border-radius: 0.3em;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    pointer-events: none; /* Ensures the border doesn't interfere with interactions */
+}
+
+.titlebar nav .current .link-outline {
     outline:  0.1em solid var(--main-text-color);
 }
 
-.titlebar nav a:not(.current):hover {
+.titlebar nav a:not(.current):hover .link-outline {
     outline:  0.06em solid var(--main-text-color);
 }
 
@@ -140,4 +152,8 @@ nav {
 
 @view-transition {
     navigation: auto;
+}
+
+a.current .link-outline {
+    view-transition-name: current;
 }
