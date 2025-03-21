@@ -85,6 +85,10 @@ body {
     text-decoration: none;
 }
 
+.titlebar.content-box a.main-link:hover {
+    outline:  0.1em solid var(--main-text-color);
+}
+
 nav {
     display: flex;
     justify-content: flex-start;
