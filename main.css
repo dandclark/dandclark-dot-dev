@@ -2,6 +2,8 @@
     --main-text-color: #cac7c7;
     --bg-color: #202020;
     --content-box-bg-color: #414141;
+    --link-color: rgb(155, 155, 255);
+    --link-shadow-color: rgba(255, 255, 255, 0.4);
 }
 
 body {
@@ -114,14 +116,14 @@ nav {
 }
 
 .content-box a {
-    color: rgb(155, 155, 255);
+    color: var(--link-color);
     text-decoration: none;
     transition-property: text-shadow;
     transition-duration: 0.25s;
 }
 
 .content-box a:hover {
-    text-shadow:  rgb(155, 155, 255) 0em 0em 0.1em;
+    text-shadow:  var(--link-shadow-color) 0em 0em 0.5em;
     text-decoration: underline;
 }
 
