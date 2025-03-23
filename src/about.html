@@ -5,25 +5,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header class="titlebar content-box">
-    <div class="main-link-container">
-      <a class="main-link" href="/">
-        <div id="main-title">Dan Clark</div>
-        <div id="secondary-title">Web Platform Engineer</div>
-      </a>
-    </div>
-    <div id="img-container" role="img" alt="Profile image of Dan" title="Photo Credit: Julie Clark :)"></div>
-    <nav>
-      <a id="home-link" href="/">
-        Home
-        <div class="link-outline"></div>
-      </a>
-      <a id="about-link" href="/about.html" class="current">
-        About
-        <div class="link-outline"></div>
-      </a>
-    </nav>
-  </header>
+  {% include "header.html" %}
   <div class="titlebar-divider"></div>
   <main>
     <div class="content-box">

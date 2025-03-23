@@ -13,8 +13,8 @@ export default async function(eleventyConfig) {
     dir: {
       input: "src",          // Input files location
       output: "dist",        // Output files location
-      includes: "_includes", // Location for includes like layouts
-      data: "_data"          // Location for global data files
+      includes: "includes", // Location for includes like layouts
+      data: "data"          // Location for global data files
     }
   };
 };

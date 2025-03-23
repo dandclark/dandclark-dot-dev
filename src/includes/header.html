@@ -1,0 +1,19 @@
+<header class="titlebar content-box">
+  <div class="main-link-container">
+    <a class="main-link" href="/">
+      <div id="main-title">Dan Clark</div>
+      <div id="secondary-title">Web Platform Engineer</div>
+    </a>
+  </div>
+  <div id="img-container" role="img" alt="Profile image of Dan" title="Photo Credit: Julie Clark :)"></div>
+  <nav>
+    <a id="home-link" href="/" class="{% if page.url == '/' %}current{% else %}{% endif %}">
+      Home
+      <div class="link-outline"></div>
+    </a>
+    <a id="about-link" href="/about.html" class="{% if page.url == '/about.html' %}current{% else %}{% endif %}">
+      About
+      <div class="link-outline"></div>
+    </a>
+  </nav>
+</header>
