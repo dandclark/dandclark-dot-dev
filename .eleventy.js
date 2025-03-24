@@ -12,7 +12,7 @@ export default async function(eleventyConfig) {
   return {
     dir: {
       input: "src",          // Input files location
-      output: "dist",        // Output files location
+      output: "docs",        // Output files location
       includes: "includes", // Location for includes like layouts
       data: "data"          // Location for global data files
     }
