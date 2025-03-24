@@ -1,0 +1,165 @@
+:root {
+    --main-text-color: #cac7c7;
+    --bg-color: #202020;
+    --content-box-bg-color: #414141;
+    --link-color: rgb(155, 155, 255);
+    --link-shadow-color: rgba(255, 255, 255, 0.4);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--main-text-color);
+    font-family: helvetica;
+    font-size: 1.2em;
+    margin: auto;
+    max-width: 70em;
+}
+
+.content-box {
+    background-color: var(--content-box-bg-color);
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.5em;
+}
+
+.content-box:not(.titlebar) > div {
+    padding: 0.0em;
+    margin: 1.0em 0em 1em 0em;
+}
+
+.content-box:not(.titlebar) > div:first-child {
+    margin-top: 0em;
+}
+
+.content-box:not(.titlebar) > div:last-child {
+    margin-bottom: 0em;
+}
+
+.titlebar-divider {
+    border-bottom: 0.1em solid white;
+}
+
+.titlebar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3em;
+    min-width: min-content;
+}
+
+.titlebar #main-title {
+    font-size: 3.5em;
+    padding-bottom: 0.1em;
+}
+
+.titlebar #secondary-title {
+    font-size: 1.8em;
+}
+
+.titlebar #img-container {
+    width: 8em;
+    height: 8em;
+    flex-shrink: 0; /* TODO Do something better at high zoom */
+    background-image: url("/img/dan-512x512.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 0.5em;
+}
+
+.titlebar > .main-link-container a {
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 0.5em;
+}
+
+.titlebar.content-box a {
+    color: var(--main-text-color);
+    display: block;
+}
+
+.titlebar.content-box .link-outline:has(a:hover) {
+    outline:  0.1em solid var(--main-text-color);
+}
+
+.titlebar.content-box a:hover {
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.titlebar.content-box a.main-link:hover {
+    outline:  0.1em solid var(--main-text-color);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5em;
+    font-size: 1.4em;
+}
+
+.titlebar nav a {
+    position: relative;
+}
+
+.titlebar nav .link-outline {
+    position: absolute;
+    border-radius: 0.3em;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    pointer-events: none; /* Ensures the border doesn't interfere with interactions */
+}
+
+.titlebar nav .current .link-outline {
+    outline:  0.1em solid var(--main-text-color);
+}
+
+.titlebar nav a:not(.current):hover .link-outline {
+    outline:  0.06em solid var(--main-text-color);
+}
+
+.content-box a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition-property: text-shadow;
+    transition-duration: 0.25s;
+}
+
+.content-box a:hover {
+    text-shadow:  var(--link-shadow-color) 0em 0em 0.5em;
+    text-decoration: underline;
+}
+
+.content-box ul {
+    margin: 0em;
+    padding-left: 1.5em;
+}
+
+.content-box li {
+    margin: 0.4em 0em 0.4em 0em;
+}
+
+.content-box li:first-child {
+    margin-top: 0em;
+}
+
+.content-box li:last-child {
+    margin-bottom: 0em;
+}
+
+#sneaky::after {
+    content: "microsoft.com";
+}
+
+#sneaky::before {
+    content: "daniec";
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+a.current .link-outline {
+    view-transition-name: current;
+}
